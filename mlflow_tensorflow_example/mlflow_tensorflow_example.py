@@ -2,6 +2,10 @@ import mlflow
 from mlflow.utils.mlflow_tags import MLFLOW_RUN_NAME
 import mlflow.keras
 
+
+
+mlflow.set_tracking_uri("/mlflow_tensorflow_example/mlruns")
+
 experiment_name = 'MNIST-Classification'
 mlflow.set_experiment(experiment_name)
 

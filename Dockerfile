@@ -25,10 +25,17 @@ RUN pip install --no-cache-dir pytorch-lightning==1.7.1
 # Install xgboost (used in the US Accidents example notebook)
 RUN pip install --no-cache-dir xgboost==0.90
 
+# Install nltk for NLP projects
+RUN pip install --no-cache-dir nltk==3.7
+
+# Install ipykernel package to enable jupyter notebook development
+RUN pip install --no-cache-dir ipykernel==6.15.3
+
 # Commands to copy directories from local file system into the docker image
 COPY accidents_usecase ./accidents_usecase/
 COPY mlflow_torch_example ./mlflow_torch_example/
 COPY mlflow_tensorflow_example ./mlflow_tensorflow_example/
+COPY smart_cities_usecase ./smart_cities_usecase/
 
 # Start a background operation to keep the container running.
 # This enables students to attach vscode to the running container and start developing locally

@@ -63,6 +63,10 @@ train_loader = DataLoader(train_ds, batch_size=32)
 # Initialize a trainer
 trainer = pl.Trainer(max_epochs=5)
 
+
+mlflow.set_tracking_uri("/mlflow_torch_example/mlruns")
+
+
 # Auto log all MLflow entities
 mlflow.pytorch.autolog()
 
