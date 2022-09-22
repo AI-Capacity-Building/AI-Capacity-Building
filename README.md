@@ -19,16 +19,29 @@ The covered libraries are: NumPy, pandas, matplotlib, scipy, sklearn, seaborn, T
 ![remote - containers extension](https://media.eos2git.cec.lab.emc.com/user/17974/files/20c48ff0-ed77-422e-a551-cf3ddba6628a)
 -	Pull the docker image from the following link: 
 
-# Running the project:
+# Running the image:
 -	In your VSCode terminal, execute the following command: docker container run -p 5000:5000 ml_env:2.0
--	To integrate docker with VSCode :
-   1.	In vscode, go to remote containers extension
-   2.	Under container you will find your running container. Right click, then choose attach visual studio code.
-   3.	You are good to go, you can now use vscode to develop inside the container
 
--	To open the MLFlow user interface and view the runs output, execute the following command in the container terminal
-mlflow ui --host 0.0.0.0
-MLFlow uses port 5000 on the host
+# Developing with VSCode 
+-	To integrate docker with VSCode :
+  1. In VSCode, go to the docker icon present in the left
+  
+  ![Icon](https://media.eos2git.cec.lab.emc.com/user/17974/files/2d0d9c0f-12ce-46cf-8525-f5f94b1ba7a8)
+  
+  2. Under containers -> choose the running container (ml_env:2.0) -> right click -> choose 'Attach    Visual Studio Code'.
+  3. You can either choose a usecase to run, or open root folder (folder containg all usecases) by just pressing ok
+  4. A newly opened VSCode will appear, install Jupyter extension (press install in container)
+  5. You can now use VSCode to develop inside the container
+  6. To run your code, open a terminal and type : python (python file name)
+
+     Example : python mlflow_torch_example.py
+  7. To open MLFlow user interface and view the runs output
+     - Right click on the usecase folder
+     - Choose open in integrated terminal 
+     - Execute mlflow ui --host 0.0.0.0
+     - In your browser open : http://0.0.0.0:5000  (mlflow uses port 5000 on the host)
+     - If your experiment has a name (example : experiment_name = "MNIST_Classification"), it will create a folder with the same name in mlflow ui, open that folder to view the        runs
+
 
 
 
