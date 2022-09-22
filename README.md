@@ -28,14 +28,15 @@ The covered libraries are: NumPy, pandas, matplotlib, scipy, sklearn, seaborn, T
   
   ![Icon](https://media.eos2git.cec.lab.emc.com/user/17974/files/2d0d9c0f-12ce-46cf-8525-f5f94b1ba7a8)
   
-  2. Under containers -> choose the running container (ml_env:2.0) -> right click -> choose 'Attach    Visual Studio Code'.
-  3. You can either choose a usecase to run, or open root folder (folder containg all usecases) by just pressing ok
-  4. A newly opened VSCode will appear, install Jupyter extension (press install in container)
-  5. You can now use VSCode to develop inside the container
-  6. To run your code, open a terminal and type : python (python file name)
+  2. Under containers -> choose the running container (ml_env:2.0) -> right click -> choose 'Attach Visual Studio Code'.
+  3. A newly opened VSCode will appear, install Jupyter & Python extensions (press install in container)
+  4. Press open folder
+  5. You can either choose a usecase to run, or open root folder (folder containing all usecases) by just pressing ok
+  6. You can now use VSCode to develop inside the container
+  7. To run your code, open a terminal inside the example folder and type : python (python file name)
 
-     Example : python mlflow_torch_example.py
-  7. To open MLFlow user interface and view the runs output
+    Example : python mlflow_torch_example.py
+  8. To open MLFlow user interface and view the runs output
      - Right click on the usecase folder
      - Choose open in integrated terminal 
      - Execute mlflow ui --host 0.0.0.0
