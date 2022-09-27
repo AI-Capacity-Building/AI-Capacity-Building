@@ -31,11 +31,16 @@ RUN pip install --no-cache-dir nltk==3.7
 # Install ipykernel package to enable jupyter notebook development
 RUN pip install --no-cache-dir ipykernel==6.15.3
 
+# # Install libraries needed for the 3rd usecase
+# RUN pip install --no-cache-dir graphviz==0.20.1
+# RUN pip install --no-cache-dir pydot==1.0.28
+
 # Commands to copy directories from local file system into the docker image
 COPY accidents_usecase ./accidents_usecase/
 COPY mlflow_torch_example ./mlflow_torch_example/
 COPY mlflow_tensorflow_example ./mlflow_tensorflow_example/
 COPY smart_cities_usecase ./smart_cities_usecase/
+COPY images_usecase ./images_usecase/
 
 # Start a background operation to keep the container running.
 # This enables students to attach vscode to the running container and start developing locally
