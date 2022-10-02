@@ -33,6 +33,10 @@ RUN pip install --no-cache-dir ipykernel==6.15.3
 # RUN apt install --no-cache-dir graphviz==0.20.1
 # RUN pip install --no-cache-dir pydot==1.0.28
 
+# to avoid xgboost import error
+RUN apt-get update
+RUN apt-get install -y libgomp1
+
 # Commands to copy directories from local file system into the docker image
 COPY accidents_usecase ./accidents_usecase/
 COPY mlflow_torch_example ./mlflow_torch_example/

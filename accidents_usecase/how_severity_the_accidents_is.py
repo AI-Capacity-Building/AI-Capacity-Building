@@ -15,8 +15,11 @@ import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import seaborn as sns 
 import matplotlib.pyplot as plt 
-import tensorflow as tf
-import torch 
+import mlflow
+import mlflow.sklearn
+import xgboost as xgb 
+
+
 pd.options.mode.chained_assignment = None
 pd.options.display.max_columns = 999
 
@@ -261,10 +264,15 @@ train_col= df[x_cols]
 
 fearture_name = train_col.columns.values 
 
+mlflow.set_tracking_uri("/accidents_usecase/mlruns")
+
 from sklearn import ensemble 
 
+
 model = ensemble.ExtraTreesRegressor(n_estimators=25, max_depth=30, max_features=0.3, n_jobs=-1, random_state=0)
-model.fit(train_col,train_y)
+mlflow.sklearn.autolog()
+with mlflow.start_run():
+    model.fit(train_col,train_y)
 
 #plot imp 
 importance = model.feature_importances_
@@ -282,8 +290,6 @@ plt.show()
 
 lets check with XGBoost also for Feature_importance_
 """
-
-import xgboost as xgb 
 
 xgb_prames = {
     'eta': 0.05,
