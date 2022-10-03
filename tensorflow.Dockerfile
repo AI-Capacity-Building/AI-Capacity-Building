@@ -23,25 +23,23 @@ RUN pip install --no-cache-dir nltk==3.7
 # Install ipykernel package to enable jupyter notebook development
 RUN pip install --no-cache-dir ipykernel==6.15.3
 
-# # Install libraries needed for the 3rd usecase
-# RUN apt install --no-cache-dir graphviz==0.20.1
-# RUN pip install --no-cache-dir pydot==1.0.28
-
 # to avoid xgboost import error
 RUN apt-get update
 RUN apt-get install -y libgomp1
 
 # Commands to copy directories from local file system into the docker image
-COPY accidents_usecase ./accidents_usecase/
-COPY mlflow_torch_example ./mlflow_torch_example/
-COPY mlflow_tensorflow_example ./mlflow_tensorflow_example/
-COPY smart_cities_usecase ./smart_cities_usecase/
-COPY images_usecase ./images_usecase/
+COPY accidents_usecase ./examples/accidents_usecase/
+COPY mlflow_tensorflow_example ./examples/mlflow_tensorflow_example/
+COPY smart_cities_usecase ./examples/smart_cities_usecase/
+COPY images_usecase ./examples/images_usecase/
+
+WORKDIR /examples
 
 # Start a background operation to keep the container running.
 # This enables students to attach vscode to the running container and start developing locally
 ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 # To run the container and use mlflow monitoring
-## Run container and expose port 5000 (used by mlflow ui): docker container run -p 5000:5000 ml_env:version
+## To build the contianer: docker -f tensorflow.Dockerfile -t tf_env:version .
+## Run container and expose port 5000 (used by mlflow ui): docker container run -p 5000:5000 tf_env:version
 ## After training a model and want to view tracked data using mlflow ui: mlflow ui --host 0.0.0.0 (after that visit localhost:5000 on your machine)
