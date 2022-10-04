@@ -264,8 +264,6 @@ train_col= df[x_cols]
 
 fearture_name = train_col.columns.values 
 
-mlflow.set_tracking_uri("/accidents_usecase/mlruns")
-
 from sklearn import ensemble 
 
 

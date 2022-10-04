@@ -33,13 +33,15 @@ COPY mlflow_tensorflow_example ./examples/mlflow_tensorflow_example/
 COPY smart_cities_usecase ./examples/smart_cities_usecase/
 COPY images_usecase ./examples/images_usecase/
 
-WORKDIR /examples
 
+
+# ENV GIT_PYTHON_REFRESH="quiet"
 # Start a background operation to keep the container running.
 # This enables students to attach vscode to the running container and start developing locally
+WORKDIR /home/examples
 ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 # To run the container and use mlflow monitoring
-## To build the contianer: docker -f tensorflow.Dockerfile -t tf_env:version .
+## To build the contianer: docker build -f tensorflow.Dockerfile -t tf_env:version .
 ## Run container and expose port 5000 (used by mlflow ui): docker container run -p 5000:5000 tf_env:version
-## After training a model and want to view tracked data using mlflow ui: mlflow ui --host 0.0.0.0 (after that visit localhost:5000 on your machine)
+## After training a model and want to view tracked data using mlflow ui run "mlflow ui --host 0.0.0.0" from the directory where mlruns folder was saved (after that visit localhost:5000 on your machine)

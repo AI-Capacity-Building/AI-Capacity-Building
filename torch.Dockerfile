@@ -38,7 +38,7 @@ COPY accidents_usecase ./examples/accidents_usecase/
 COPY mlflow_torch_example ./examples/mlflow_torch_example/
 COPY smart_cities_usecase ./examples/smart_cities_usecase/
 
-WORKDIR /examples
+WORKDIR /home/examples
 
 # Start a background operation to keep the container running.
 # This enables students to attach vscode to the running container and start developing locally
