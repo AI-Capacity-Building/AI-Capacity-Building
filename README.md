@@ -3,7 +3,8 @@ The AI capacity building project is a project that aims to develop a sandbox for
 
 # Use cases:
 1.	Accident Severity Classification: a machine learning project that labels the accident severity from 1- 4 (inclusive) and provides analysis of the data. Data format is a csv file
-2.	Smart Cities Sentiment Analysis: an NLP project in which Arabic tweets discussing smart cities are classified either positive, negative, or neutral. Data format is a tsv file.  
+2.	Smart Cities Sentiment Analysis: an NLP project in which Arabic tweets discussing smart cities are classified either positive, negative, or neutral. Data format is a tsv file.
+3.	Accident Detection: a computer vision project that performs image classification. The images are split into labeled folders, and a CNN is used to classify the input images.
 # Additional files:
 1.	A hands-on example of how to use MLFlow with TensorFlow
 2.	A hands-on example of how to use MLFLow with PyTorch
@@ -13,8 +14,11 @@ The covered libraries are: NumPy, pandas, matplotlib, scipy, sklearn, seaborn, T
 
 # Prerequisites:
 -	Installation of docker desktop from https://www.docker.com/products/docker-desktop/
--	Pull the docker image from the following link: 
--	Run the image
+-	Pull the docker image from the following link:
+docker pull aicapacitybuilding/torch_env --> for the torch image
+docker pull aicapacitybuilding/tensorflow_env --> for the tensorflow image
+-	Run the image:
+docker container run -it -p 5000:5000 <imageID>
 
 
 # Running the use cases
