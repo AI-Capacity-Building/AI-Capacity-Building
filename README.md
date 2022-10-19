@@ -20,7 +20,7 @@ docker pull aicapacitybuilding/tensorflow_env --> for the tensorflow image
 - If you're bulding the docker image from this repository's Dockerfiles instead of pulling it from DockerHub, you can build the image using the following commands:
    - For the image containing both tensorflow and pytorch: docker build -t ml_env:1.0 .
    - For the image containing pytorch only: docker build -f torch.Dockerfile -t torch_env:1.0 .
-   - For the image containing tensorflow only: docker -f tensorflow.Dockerfile -t tensorflow_env:1.0 .
+   - For the image containing tensorflow only: docker build -f tensorflow.Dockerfile -t tensorflow_env:1.0 .
 -	Run the image:
 docker container run -it -p 5000:5000 <imageID>
 or
