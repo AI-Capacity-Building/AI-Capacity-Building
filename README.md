@@ -23,8 +23,8 @@ docker pull aicapacitybuilding/tensorflow_env --> for the tensorflow image
    -  For the image containing tensorflow only: docker build -f tensorflow.Dockerfile -t tensorflow_env:1.0 .
 -	Run the image:
 docker container run -it -p 5000:5000 <imageID> <br /> 
-or
-docker container run -it -p 5000:5000 container_name
+or <br /> 
+docker container run -it -p 5000:5000 container_name <br /> 
 Example: docker container run -it -p 5000:5000 tensorflow_env:1.0
 
 
