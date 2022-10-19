@@ -17,7 +17,7 @@ The covered libraries are: NumPy, pandas, matplotlib, scipy, sklearn, seaborn, T
 -	Pull the docker image from the following link:
 docker pull aicapacitybuilding/torch_env --> for the torch image
 docker pull aicapacitybuilding/tensorflow_env --> for the tensorflow image
-- If you're bulding the docker image from this repository instead of pulling it, you can build the image using the following commands:
+- If you're bulding the docker image from this repository instead of pulling it from DockerHub, you can build the image using the following commands:
    - For the image containing both tensorflow and pytorch: docker build -t ml_env:1.0 .
    - For the image containing pytorch only: docker build -f torch.Dockerfile -t torch_env:1.0 .
    - For the image containing tensorflow only: docker -f tensorflow.Dockerfile -t tensorflow_env:1.0 .
