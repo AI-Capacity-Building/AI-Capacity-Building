@@ -15,10 +15,8 @@ The covered libraries are: NumPy, pandas, matplotlib, scipy, sklearn, seaborn, T
 # Prerequisites:
 -	Installation of docker desktop from https://www.docker.com/products/docker-desktop/
 -	You can find docker images in the follwoing link: https://hub.docker.com/u/aicapacitybuilding
-- Pull the images using the follwoing commands: 
-<br /> 
+-  Pull the images using the following commands: 
 docker pull aicapacitybuilding/torch_env:1.0 --> for the torch image
-<br /> 
 docker pull aicapacitybuilding/tensorflow_env:1.0 --> for the tensorflow image
 -  If you're bulding the docker image from this repository's Dockerfiles instead of pulling it from DockerHub, you can build the image using the following commands:
    -  For the image containing both tensorflow and pytorch: docker build -t ml_env:1.0 .
