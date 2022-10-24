@@ -42,13 +42,13 @@ Example: docker container run -it -p 5000:5000 tensorflow_env:1.0
   1. Install VSCode from : https://code.visualstudio.com/Download
   2. Installation of 2 extensions in VSCode: Docker, and Remote – Containers
   
-  ![Docker extension](AI-Capacity-Building\Documentation\Pictures used in documentation\Fig4 - Docker extension.png)
-  ![remote - containers extension](AI-Capacity-Building\Documentation\Pictures used in documentation\Fig5 - Dev Containers extension.png)
+  ![Docker extension](Documentation/Pictures%20used%20in%20documentation/Fig4%20-%20Docker%20extension.png)
+  ![remote - containers extension](Documentation/Pictures%20used%20in%20documentation/Fig5%20-%20Dev%20Containers%20extension.png)
    3. If you haven't run the image yet, in your vscode terminal execute: docker container run -p 5000:5000 ml_env:2.0
   
  4. In VSCode, go to the docker icon present in the left
   
-  ![Icon](AI-Capacity-Building\Documentation\Pictures used in documentation\Fig6 - Docker Icon.png)
+  ![Icon](Documentation/Pictures%20used%20in%20documentation/Fig6%20-%20Docker%20Icon.png)
   
   5. Under containers -> choose the running container (ml_env:2.0) -> right click -> choose 'Attach Visual Studio Code'.
   6. A newly opened VSCode will appear, install Jupyter & Python extensions (press install in container)
