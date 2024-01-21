@@ -55,13 +55,13 @@ NumPy, pandas, matplotlib, scipy, scikit-learn, seaborn, TensorFlow, PyTorch, ML
   1. Install VSCode from : https://code.visualstudio.com/Download
   2. Installation of 2 extensions in VSCode: Docker, and Remote – Containers
   
-  ![Docker extension](https://media.eos2git.cec.lab.emc.com/user/17974/files/0fc3c7aa-4c92-49a2-b658-d476c7a0dcf3)
-  ![remote - containers extension](https://media.eos2git.cec.lab.emc.com/user/17974/files/20c48ff0-ed77-422e-a551-cf3ddba6628a)
+  ![Docker extension](Documentation/Pictures%20used%20in%20documentation/Fig4%20-%20Docker%20extension.png)
+  ![remote - containers extension](Documentation/Pictures%20used%20in%20documentation/Fig5%20-%20Dev%20Containers%20extension.png)
    3. If you haven't run the image yet, in your vscode terminal execute: docker container run -p 5000:5000 ml_env:2.0
   
  4. In VSCode, go to the docker icon present in the left
   
-  ![Icon](https://media.eos2git.cec.lab.emc.com/user/17974/files/2d0d9c0f-12ce-46cf-8525-f5f94b1ba7a8)
+  ![Icon](Documentation/Pictures%20used%20in%20documentation/Fig6%20-%20Docker%20Icon.png)
   
   5. Under containers -> choose the running container (ml_env:2.0) -> right click -> choose 'Attach Visual Studio Code'.
   6. A newly opened VSCode will appear, install Jupyter & Python extensions (press install in container)
